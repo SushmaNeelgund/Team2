@@ -10,8 +10,9 @@ import { extend } from 'webdriver-js-extender';
 // import { addClass } from '@syncfusion/ej2-base';
 // import { FormControl } from '@angular/forms';
 import {startWith, map} from 'rxjs/operators';
-import { Specaility } from 'src/app/speciality';
-import { DataService } from 'src/app/data.service';
+
+import { DataService } from 'src/app/layout/menu-nav/data.service';
+import { Specaility } from './speciality';
 // import { Specaility, Practice } from '../speciality';
 // import { MenuNavbarService } from '../menu-navbar.service';
 
@@ -28,7 +29,7 @@ export class MenuNavComponent implements OnInit {
    closeResult: string;
     selectedOption:string;
     control = new FormControl();
-     public arr:Specaility[]=[];
+     arr4:Specaility[]=[];
 
      public localFields: Object = { text: "Name"};
      public localWaterMark: string = 'Select practice';
@@ -87,13 +88,6 @@ export class MenuNavComponent implements OnInit {
           //enable the highlight property to highlight the matched character in suggestion list
           public autofill2: Boolean = true;
 
-           public arr4:Specaility[]=[];
-            // maps the appropriate column to fields property
-            public fields3: Object = { value: "speciality" };
-            // set the placeholder to the AutoComplete input
-            public text3: string = "Find a speciality";
-            //enable the highlight property to highlight the matched character in suggestion list
-            public autofill3: Boolean = true;
 
 
 
@@ -182,7 +176,7 @@ export class MenuNavComponent implements OnInit {
 
     this._data.getAllSpeciality().subscribe(
       (data:Specaility[]) => {
-        this.arr = data;
+        this.arr4 = data;
      },
     );
 

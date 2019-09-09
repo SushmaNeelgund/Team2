@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataService {
-    url:string="https://d618776e.ngrok.io/api/Patient";
+    url:string='https://4fe74f2b.ngrok.io/api/Patient';
 
   constructor(private _http:HttpClient) { }
 
